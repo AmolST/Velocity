@@ -18,6 +18,7 @@ var selectedContact ;
         return {
             getAllContacts,
             getContactDetails,
-            setContactDetails
+            setContactDetails,
+            selectedContact
         }
     }]);

@@ -1,4 +1,4 @@
- .nav-tabs {
+.nav-tabs {
     display: none;
 }
 .nav-tabs--vertical {
@@ -7,6 +7,44 @@
 }
 .stars {
     margin: 20px auto 1px;
+}
+
+.nopadding {
+   padding: 0;
+   margin: 0;
+}
+.contact-details{
+    border: 1px solid #495057;
+    border-radius: 5px;
+}
+.tab-content{
+    padding: 25px 40px;
+}
+img{
+    width:100%;
+}
+.likes{
+  display: flex;         
+  flex-direction: row;    
+  flex-grow: 0;            
+  flex-wrap: wrap;         
+}
+.likes .item{
+  flex-grow: 1;            
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.likes .item div{
+    border:1px solid gray;
+    padding: 5px 10px;
+}
+.likes .item .item-data:nth-child(odd) {
+    background: white;
+}
+
+.likes .item .item-data:nth-child(even) {
+    background: #ccc;
 }
 
 @media(min-width:768px) {
@@ -46,7 +84,7 @@
 @media(max-width:767px) {
     .tab-pane {
         display: block !important;
-        opacity: 1 !important;
+        opacity: 1 ;
     }
     .tab-content {
         width: 100%;
