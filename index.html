@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script data-require="angularjs@1.6.4" data-semver="1.6.4" src="https://code.angularjs.org/1.6.4/angular.min.js"></script>    
@@ -13,17 +13,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Applicantion Files -->
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
-    <script src="contact-list.service.js"></script>
+    <script src="contact.service.js"></script>
     <script src="contact-list.directive.js"></script>
+    <script src="contact-details.directive.js"></script>
+    
   </head>
 
   <body>   
-    <div ng-app = "vlocityApp" ng-controller="vlocityCtrl">
-    {{message}}
-    <div class="col-sm-4" >
-     <contact-list></contact-list>
+  <div ng-app = "vlocityApp" ng-controller="vlocityCtrl">
+    <div class="container d-flex flex-row">
+      <div class="row">
+        <div class="col-md-3" >
+          <contact-list></contact-list>
+        </div>
+        <div class="col-md-9" >
+          <contact-details></contact-details>
+        </div>
+      </div>
     </div>
-    </div>
+  </div>
   </body>
 </html>

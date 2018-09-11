@@ -1,1 +1,59 @@
 /* Styles go here */
+ .nav-tabs {
+    display: none;
+}
+.nav-tabs--vertical {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.stars {
+    margin: 20px auto 1px;
+}
+
+@media(min-width:768px) {
+    .nav-tabs {
+        display: flex;
+        border: 1px solid gray;
+    }
+    .nav-item {
+        border-bottom: 1px solid gray;
+    }
+    .nav-link {
+        color: #495057;
+    }
+    .nav-tabs .nav-link.active {
+        border-top-color: gray;
+        font-weight: bold;
+        border-radius: 0;
+    }
+    .nav-tabs .nav-link:focus,
+    .nav-tabs .nav-link:hover {
+        border-top-color: gray;
+        color: #495057;
+    }
+    .card {
+        border: none;
+    }
+
+        .card .card-header {
+            display: none;
+        }
+
+        .card .collapse {
+            display: block;
+        }
+}
+
+@media(max-width:767px) {
+    .tab-pane {
+        display: block !important;
+        opacity: 1 !important;
+    }
+    .tab-content {
+        width: 100%;
+    }
+    .nav-tabs--vertical {
+        display: none;
+    }
+    
+}

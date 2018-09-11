@@ -1,4 +1,6 @@
-<div>All Contacts</div>
-<div ng-repeat="contact in contactList.People">
-    {{contact.name}}
-</div>
+
+<ul id="tabs" class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="tablist">
+    <li class="nav-item" ng-repeat="contact in contactList.People" >
+        <a id="tab-{{$index}}" href="#pane-{{$index}}" class="nav-link active" data-toggle="tab" role="tab" ng-click="setContactDetails(contact)" >{{contact.name}}</a>
+    </li>
+</ul>
