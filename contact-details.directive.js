@@ -2,13 +2,15 @@ app.directive('contactDetails', ['contactService', function(contactService){
 return {
     restrict : 'AE',
     templateUrl : './contact-details.template.html',
-    link : function($scope){
+    link : function(scope){
        
-        
-          $scope.$on('GETCONTACTDETAILS', function(e, data){
-                 $scope.contact = data;
-          });
+        contactService.registerForContactDetails(function (contact) {
+            scope.contact = contact;            
+        })
 
+        scope.sendMessage = function () {
+            //TODO : Send message
+        }
     }
 }
 }]);

@@ -1,24 +1,25 @@
 app.factory('contactService', ['$http',
     function ($http) {
-var selectedContact ;
+
+        var listerns = [];
+        
+        var registerForContactDetails = function(callback){
+            listerns.push(callback);
+        }
 
         var getAllContacts = function () {
             return $http.get("./people.json");
         };
 
-        var setContactDetails = function(contact) {
-            selectedContact = contact;
-            console.log(contact);
+        var updateContactDetails = function (contact) {
+            listerns.forEach(function (callback) {
+                callback(contact);
+            })
         }
 
-        var getContactDetails = function(){
-            return selectedContact;
-        };
-
-        return {
-            getAllContacts,
-            getContactDetails,
-            setContactDetails,
-            selectedContact
+        return {            
+            getAllContacts,            
+            registerForContactDetails,          
+            updateContactDetails
         }
     }]);
