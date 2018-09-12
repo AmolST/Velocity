@@ -1,6 +1,6 @@
 
 <ul id="tabs" class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="tablist">
-    <li class="nav-item" ng-repeat="contact in contactList.People" >
+    <li class="nav-item" ng-repeat="contact in contactList | filter : {name : keyword} " >
         <a id="tab" href="#pane" class="nav-link active" data-toggle="tab" role="tab" ng-click="setContactDetails(contact)" >{{contact.name}}</a>
     </li>
 </ul>

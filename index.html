@@ -16,15 +16,21 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <script src="contact.service.js"></script>
+    <script src="contact-search.directive.js"></script>
     <script src="contact-list.directive.js"></script>
     <script src="contact-details.directive.js"></script>
     
   </head>
 
   <body>   
-  <div ng-app = "vlocityApp" ng-controller="vlocityCtrl">
-    <div class="container d-flex flex-row">
-      <div class="row">
+  <div ng-app = "vlocityApp" ng-controller="vlocityCtrl">     
+    <div class="container">     
+        <div class="row">
+            <div class="col-md-3 nopadding">
+              <contact-search></contact-search>
+            </div>
+          </div>
+      <div class="row">        
         <div class="col-md-3 nopadding" >
           <contact-list></contact-list>
         </div>
